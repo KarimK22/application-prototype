@@ -1,8 +1,11 @@
 import { QRCodeSVG } from 'qrcode.react';
 import styles from './QRShare.module.css';
 
+const PRODUCTION_URL = 'https://application-prototype-khaki.vercel.app';
+
 export default function QRShare() {
-  const appUrl = window.location.origin + '/signup';
+  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  const appUrl = isLocal ? PRODUCTION_URL + '/signup' : window.location.origin + '/signup';
 
   return (
     <div className={styles.page}>
@@ -24,7 +27,7 @@ export default function QRShare() {
 
         <p className={styles.url}>{appUrl}</p>
         <p className={styles.note}>
-          Make sure your phone is on the same WiFi network
+          Scan with your phone camera to open LautSea
         </p>
       </div>
     </div>
