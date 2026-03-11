@@ -1,0 +1,38 @@
+export const communityPosts = [
+  {
+    id: 1,
+    author: 'Amin',
+    avatar: 'A',
+    timeAgo: '2h ago',
+    tag: 'Report',
+    content: 'Strong currents near Mabul today! ⚠️ Be careful guys!',
+    reactions: { warning: 12, comment: 24, heart: 24 },
+  },
+  {
+    id: 2,
+    author: 'Siti',
+    avatar: 'S',
+    timeAgo: '4h ago',
+    tag: 'Reef Alert',
+    content: 'Damaged corals spotted near our village 🌊 Protect the reef!',
+    reactions: { warning: 12, comment: 24, heart: 0 },
+  },
+  {
+    id: 3,
+    author: 'Ahmad',
+    avatar: 'A',
+    timeAgo: '6h ago',
+    tag: 'Catch',
+    content: 'Great mackerel catch today at the north reef! Sustainable spot confirmed 🎣',
+    reactions: { warning: 2, comment: 15, heart: 32 },
+  },
+  {
+    id: 4,
+    author: 'Lina',
+    avatar: 'L',
+    timeAgo: '8h ago',
+    tag: 'Report',
+    content: 'Boat traffic increasing near protected zone. We should report this to authorities.',
+    reactions: { warning: 18, comment: 9, heart: 14 },
+  },
+];

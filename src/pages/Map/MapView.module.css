@@ -1,0 +1,105 @@
+.mapPage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.legend {
+  display: flex;
+  gap: var(--space-md);
+  padding: 10px var(--space-md);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  z-index: 10;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.legendDot.good { background: var(--color-good); }
+.legendDot.reef { background: var(--color-reef); }
+.legendDot.overfished { background: var(--color-danger); }
+
+.mapWrapper {
+  flex: 1;
+  position: relative;
+  min-height: 500px;
+}
+
+.leafletMap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.customTooltip {
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: var(--font-family);
+  padding: 3px 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.favoriteBtn {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: var(--color-surface);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  font-size: 1.3rem;
+  transition: transform 0.2s;
+}
+
+.favoriteBtn:active {
+  transform: scale(0.92);
+}
+
+.reportBtn {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--color-ocean-deep) 0%, var(--color-ocean-mid) 100%);
+  color: white;
+  padding: 14px 36px;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  box-shadow: 0 4px 20px rgba(10, 61, 98, 0.35);
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+
+.reportBtn:active {
+  transform: translateX(-50%) scale(0.96);
+}

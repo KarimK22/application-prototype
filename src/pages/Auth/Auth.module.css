@@ -1,0 +1,231 @@
+.authPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #062640 0%, #0A3D62 20%, #1565C0 45%, #42A5F5 70%, #B3E5FC 90%, #E0F7FA 100%);
+}
+
+.heroSection {
+  padding: 40px var(--space-lg) 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.logoIcon {
+  font-size: 3.5rem;
+  margin-bottom: var(--space-sm);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.brandName {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: var(--space-xs);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  font-weight: 400;
+  margin-bottom: var(--space-sm);
+}
+
+.waveSvg {
+  width: 100%;
+  display: block;
+  line-height: 0;
+}
+
+.formCard {
+  flex: 1;
+  background: var(--color-surface);
+  border-radius: 28px 28px 0 0;
+  padding: var(--space-lg) var(--space-lg) var(--space-xl);
+  margin-top: var(--space-md);
+  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.formTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: var(--space-lg);
+  color: var(--color-ocean-deep);
+  letter-spacing: -0.02em;
+}
+
+.inputGroup {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9CA3AF;
+  font-size: 1.05rem;
+}
+
+.input {
+  width: 100%;
+  padding: 15px 15px 15px 44px;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  background: #F8FAFC;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  color: var(--color-text-primary);
+}
+
+.input:focus {
+  border-color: var(--color-ocean-mid);
+  box-shadow: 0 0 0 3px rgba(27, 108, 168, 0.1);
+  background: white;
+}
+
+.input::placeholder {
+  color: #9CA3AF;
+}
+
+.phoneGroup {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.phonePrefix {
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  background: #F8FAFC;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.phonePrefix .flag {
+  font-size: 1.2rem;
+}
+
+.phoneInput {
+  flex: 1;
+  padding: 15px;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  background: #F8FAFC;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.phoneInput:focus {
+  border-color: var(--color-ocean-mid);
+  box-shadow: 0 0 0 3px rgba(27, 108, 168, 0.1);
+  background: white;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 17px;
+  background: linear-gradient(135deg, #1565C0 0%, #0D47A1 50%, #0A3D62 100%);
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 14px;
+  margin-top: 6px;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 16px rgba(21, 101, 192, 0.35);
+  letter-spacing: -0.01em;
+}
+
+.submitBtn:active {
+  transform: scale(0.98);
+}
+
+.termsText {
+  text-align: center;
+  font-size: 0.73rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-md);
+  line-height: 1.5;
+}
+
+.termsText a {
+  color: var(--color-ocean-mid);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+  color: #9CA3AF;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #E5E7EB;
+}
+
+.socialBtns {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+.socialBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 13px 28px;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 14px;
+  background: var(--color-surface);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.socialBtn:active {
+  transform: scale(0.97);
+  background: #F8FAFC;
+}
+
+.switchText {
+  text-align: center;
+  margin-top: var(--space-lg);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.switchText a {
+  color: var(--color-ocean-mid);
+  font-weight: 700;
+}
+
+.error {
+  background: #FEF2F2;
+  color: var(--color-danger);
+  padding: 10px var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  margin-bottom: var(--space-md);
+  border-left: 3px solid var(--color-danger);
+  font-weight: 500;
+}

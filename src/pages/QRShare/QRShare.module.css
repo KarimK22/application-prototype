@@ -1,0 +1,63 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #062640 0%, #0A3D62 30%, #1565C0 70%, #42A5F5 100%);
+  padding: var(--space-lg);
+}
+
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 340px;
+  width: 100%;
+}
+
+.logo {
+  font-size: 3rem;
+  margin-bottom: var(--space-sm);
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-ocean-deep);
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+.qrWrapper {
+  display: inline-flex;
+  padding: 16px;
+  background: white;
+  border-radius: 16px;
+  border: 2px solid var(--color-border);
+  margin-bottom: var(--space-md);
+}
+
+.url {
+  font-size: 0.75rem;
+  color: var(--color-ocean-mid);
+  font-weight: 600;
+  word-break: break-all;
+  margin-bottom: var(--space-md);
+  padding: 8px 12px;
+  background: var(--color-ocean-pale);
+  border-radius: var(--radius-sm);
+}
+
+.note {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
