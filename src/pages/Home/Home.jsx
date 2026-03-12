@@ -3,6 +3,7 @@ import { FiAnchor, FiCrosshair, FiChevronRight } from 'react-icons/fi';
 import { weatherData } from '../../data/mockWeather';
 import { weeklyStats } from '../../data/mockCatches';
 import OceanScene from '../../components/OceanScene';
+import PageHint from '../../components/PageHint/PageHint';
 import styles from './Home.module.css';
 
 export default function Home() {
@@ -76,6 +77,9 @@ export default function Home() {
         </div>
         <FiChevronRight className={styles.arrow} />
       </div>
+      <PageHint pageKey="home">
+        Check today's weather before heading out. Tap a button below to start!
+      </PageHint>
     </div>
   );
 }

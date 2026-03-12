@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { speciesList } from '../../data/mockCatches';
+import PageHint from '../../components/PageHint/PageHint';
 import styles from './LogCatch.module.css';
 
 const statusLabels = {
@@ -91,6 +92,9 @@ export default function LogCatch() {
       <button className={styles.saveBtn} onClick={handleSave}>
         Save Catch
       </button>
+      <PageHint pageKey="log">
+        Pick your fish, enter the amount, and tap Save. Easy!
+      </PageHint>
     </div>
   );
 }

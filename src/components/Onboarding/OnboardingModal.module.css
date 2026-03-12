@@ -1,0 +1,117 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #072D4E 0%, #0E4D78 40%, #1B6CA8 70%, #3DC1D3 100%);
+  padding: var(--space-lg);
+}
+
+.skip {
+  position: absolute;
+  top: env(safe-area-inset-top, 16px);
+  right: var(--space-md);
+  margin-top: var(--space-md);
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: var(--space-sm) var(--space-md);
+}
+
+.skip:active {
+  color: #fff;
+}
+
+.slideArea {
+  width: 100%;
+  max-width: 340px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.track {
+  display: flex;
+  transition: transform 0.35s ease;
+}
+
+.slide {
+  min-width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.emoji {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-ocean-deep);
+  margin: 0;
+}
+
+.desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #4a5568;
+  margin: 0;
+  max-width: 280px;
+}
+
+.dots {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.dotActive {
+  background: var(--color-ocean-light);
+  transform: scale(1.25);
+}
+
+.nextBtn {
+  margin-top: var(--space-lg);
+  width: 100%;
+  max-width: 340px;
+  padding: 14px 0;
+  border: none;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #1565C0 0%, #0D47A1 50%, #0A3D62 100%);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(21, 101, 192, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nextBtn:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(21, 101, 192, 0.25);
+}

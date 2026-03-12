@@ -4,11 +4,11 @@
 
 .fishCard {
   background: var(--color-surface);
-  border-radius: 20px;
+  border-radius: var(--radius-xl);
   padding: var(--space-lg) var(--space-lg) var(--space-md);
   text-align: center;
   margin-bottom: var(--space-lg);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-md);
   position: relative;
   overflow: hidden;
 }
@@ -19,9 +19,9 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 50%;
-  background: linear-gradient(180deg, #E3F2FD 0%, transparent 100%);
-  border-radius: 20px 20px 0 0;
+  height: 55%;
+  background: linear-gradient(180deg, #E3F2FD 0%, rgba(227, 242, 253, 0) 100%);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
   z-index: 0;
 }
 
@@ -31,14 +31,14 @@
   display: block;
   position: relative;
   z-index: 1;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.12));
 }
 
 .speciesSelect {
   width: 100%;
-  padding: 13px var(--space-md);
-  border: 1.5px solid #E5E7EB;
-  border-radius: 14px;
+  padding: 14px var(--space-md);
+  border: 2px solid #E8EDF2;
+  border-radius: var(--radius-lg);
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--color-ocean-deep);
@@ -48,19 +48,20 @@
   text-align: center;
   position: relative;
   z-index: 1;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .speciesSelect:focus {
   border-color: var(--color-ocean-mid);
+  box-shadow: 0 0 0 3px rgba(27, 108, 168, 0.1);
 }
 
 .formGroup {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
-  border-bottom: 1px solid #F3F4F6;
+  padding: 18px 0;
+  border-bottom: 1px solid #F0F2F5;
 }
 
 .formLabel {
@@ -76,44 +77,51 @@
 }
 
 .quantityBtn {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
   background: #F8FAFC;
-  border: 1.5px solid #E5E7EB;
+  border: 2px solid #E8EDF2;
   font-size: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-ocean-mid);
   font-weight: 600;
-  transition: transform 0.15s, background 0.2s;
+  transition: transform 0.15s, background 0.2s, border-color 0.2s;
 }
 
 .quantityBtn:active {
-  transform: scale(0.92);
+  transform: scale(0.9);
   background: var(--color-ocean-pale);
+  border-color: var(--color-ocean-mid);
 }
 
 .quantityValue {
-  width: 52px;
+  width: 56px;
   text-align: center;
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 800;
   padding: 8px;
-  border: 1.5px solid #E5E7EB;
-  border-radius: 12px;
+  border: 2px solid #E8EDF2;
+  border-radius: var(--radius-md);
   background: white;
+  color: var(--color-ocean-deep);
 }
 
 .weightSelect {
-  padding: 10px 20px;
-  border: 1.5px solid #E5E7EB;
-  border-radius: 12px;
+  padding: 11px 22px;
+  border: 2px solid #E8EDF2;
+  border-radius: var(--radius-md);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   background: white;
   color: var(--color-text-primary);
+  transition: border-color 0.2s;
+}
+
+.weightSelect:focus {
+  border-color: var(--color-ocean-mid);
 }
 
 .statusWarning {
@@ -121,7 +129,7 @@
   align-items: center;
   gap: 10px;
   padding: 14px var(--space-md);
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   margin-top: var(--space-md);
   margin-bottom: var(--space-lg);
   border-left: 4px solid var(--color-danger);
@@ -156,17 +164,30 @@
 
 .saveBtn {
   width: 100%;
-  padding: 17px;
-  background: linear-gradient(135deg, #26A69A 0%, #00897B 50%, #00695C 100%);
+  padding: 18px;
+  background: linear-gradient(135deg, #26A69A 0%, #00897B 40%, #00695C 100%);
   color: white;
   font-size: 1.05rem;
   font-weight: 700;
-  border-radius: 14px;
-  transition: transform 0.15s;
-  box-shadow: 0 4px 16px rgba(38, 166, 154, 0.35);
+  border-radius: var(--radius-lg);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s;
+  box-shadow: 0 6px 24px rgba(38, 166, 154, 0.35), 0 2px 6px rgba(0, 0, 0, 0.1);
   letter-spacing: -0.01em;
+  position: relative;
+  overflow: hidden;
+}
+
+.saveBtn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent);
+  pointer-events: none;
 }
 
 .saveBtn:active {
-  transform: scale(0.98);
+  transform: scale(0.97);
 }

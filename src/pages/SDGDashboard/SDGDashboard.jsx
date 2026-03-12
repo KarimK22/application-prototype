@@ -1,4 +1,5 @@
 import { sdg14, sdg9 } from '../../data/mockSDG';
+import PageHint from '../../components/PageHint/PageHint';
 import styles from './SDGDashboard.module.css';
 
 function SDGSection({ data }) {
@@ -51,6 +52,9 @@ export default function SDGDashboard() {
     <div className={styles.sdgPage}>
       <SDGSection data={sdg14} />
       <SDGSection data={sdg9} />
+      <PageHint pageKey="sdg">
+        This shows how your fishing helps the ocean. Higher numbers are better!
+      </PageHint>
     </div>
   );
 }

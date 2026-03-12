@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, CircleMarker, Circle, Tooltip, Popup } from 'r
 import { FiFlag } from 'react-icons/fi';
 import { mapZones, overfishedCenter, overfishedRadius } from '../../data/mockMapZones';
 import 'leaflet/dist/leaflet.css';
+import PageHint from '../../components/PageHint/PageHint';
 import styles from './MapView.module.css';
 
 const markerColors = {
@@ -93,6 +94,9 @@ export default function MapView() {
           Report Change
         </button>
       </div>
+      <PageHint pageKey="map">
+        Green dots are good fishing spots. Red areas are overfished — avoid those!
+      </PageHint>
     </div>
   );
 }

@@ -2,8 +2,8 @@ import { createContext, useState, useContext } from 'react';
 
 const AuthContext = createContext(null);
 
-const USERS_KEY = 'lautsea_users';
-const CURRENT_KEY = 'lautsea_current_user';
+const USERS_KEY = 'oceanicare_users';
+const CURRENT_KEY = 'oceanicare_current_user';
 
 function getStoredUsers() {
   try {

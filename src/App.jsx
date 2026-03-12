@@ -1,8 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext';
-import ProtectedRoute from './components/ProtectedRoute';
-import SignUp from './pages/Auth/SignUp';
-import Login from './pages/Auth/Login';
+import { OnboardingProvider } from './context/OnboardingContext';
+import AppShell from './components/AppShell';
 import Home from './pages/Home/Home';
 import MapView from './pages/Map/MapView';
 import LogCatch from './pages/LogCatch/LogCatch';
@@ -13,22 +11,20 @@ import './App.css';
 
 export default function App() {
   return (
-    <AuthProvider>
+    <OnboardingProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/qr" element={<QRShare />} />
-          <Route element={<ProtectedRoute />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/map" element={<MapView />} />
-            <Route path="/log" element={<LogCatch />} />
-            <Route path="/sdg" element={<SDGDashboard />} />
-            <Route path="/community" element={<Community />} />
-          </Route>
-          <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/qr" element={<QRShare />} />
+        <Route element={<AppShell />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/map" element={<MapView />} />
+          <Route path="/log" element={<LogCatch />} />
+          <Route path="/sdg" element={<SDGDashboard />} />
+          <Route path="/community" element={<Community />} />
+        </Route>
+        <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
-    </AuthProvider>
+    </OnboardingProvider>
   );
 }

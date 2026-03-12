@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { communityPosts } from '../../data/mockCommunity';
+import PageHint from '../../components/PageHint/PageHint';
 import styles from './Community.module.css';
 
 function PostCard({ post }) {
@@ -54,6 +55,9 @@ export default function Community() {
       {communityPosts.map(post => (
         <PostCard key={post.id} post={post} />
       ))}
+      <PageHint pageKey="community">
+        See what other fishers share. Tap the heart to show support!
+      </PageHint>
     </div>
   );
 }
